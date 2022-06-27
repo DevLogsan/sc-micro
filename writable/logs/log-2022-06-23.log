@@ -1,0 +1,262 @@
+CRITICAL - 2022-06-23 09:24:24 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 231.
+ 1 SYSTEMPATH\CodeIgniter.php(231): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(189): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(43): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2022-06-23 03:50:24 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Agences.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Agences.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Agences')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Agences')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Agences', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:06:08 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: \App\Controllers\Agences/ajouter_une_agence
+in SYSTEMPATH\Router\Router.php on line 466.
+ 1 SYSTEMPATH\Router\Router.php(466): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Agences/ajouter_une_agence')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('C:\\')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('C:\\')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:06:57 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: \App\Controllers\Agences/ajouter_une_agence
+in SYSTEMPATH\Router\Router.php on line 466.
+ 1 SYSTEMPATH\Router\Router.php(466): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Agences/ajouter_une_agence')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('C:\\')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('C:\\')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:11:15 --> Invalid file: agences/ajout-agences.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('agences/ajout-agences.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agences', [], true)
+ 3 APPPATH\Controllers\Agences.php(9): view('agences/ajout-agences')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:29:08 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:33:04 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:36:55 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:40:30 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:45:27 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 04:55:36 --> Call to undefined function css_url()
+in APPPATH\Views\accueil.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(9): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 07:37:13 --> Undefined constant "Accueil"
+in APPPATH\Views\accueil.php on line 12.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(12): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 07:37:17 --> Undefined constant "Accueil"
+in APPPATH\Views\accueil.php on line 12.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('accueil', [], true)
+ 4 APPPATH\Controllers\Agences.php(12): view('accueil')
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 08:00:06 --> Uninitialized string offset 0
+in SYSTEMPATH\CodeIgniter.php on line 846.
+ 1 SYSTEMPATH\CodeIgniter.php(846): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'SYSTEMPATH\\CodeIgniter.php', 846)
+ 2 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 08:00:35 --> Uninitialized string offset 0
+in SYSTEMPATH\CodeIgniter.php on line 846.
+ 1 SYSTEMPATH\CodeIgniter.php(846): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'SYSTEMPATH\\CodeIgniter.php', 846)
+ 2 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 08:06:00 --> Too few arguments to function CodeIgniter\Router\RouteCollection::get(), 1 passed in C:\xampp\htdocs\rtw\app\Config\Routes.php on line 38 and at least 2 expected
+in SYSTEMPATH\Router\RouteCollection.php on line 876.
+ 1 APPPATH\Config\Routes.php(38): CodeIgniter\Router\RouteCollection->get('C:\\')
+ 2 SYSTEMPATH\CodeIgniter.php(758): require('APPPATH\\Config\\Routes.php')
+ 3 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 08:14:37 --> The namespace delimiter is a backslash (\), not a slash (/). Route handler: \App\Controllers\Agences/accueil
+in SYSTEMPATH\Router\Router.php on line 466.
+ 1 SYSTEMPATH\Router\Router.php(466): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Agences/accueil')
+ 2 SYSTEMPATH\Router\Router.php(181): CodeIgniter\Router\Router->checkRoutes('C:\\')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('C:\\')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 09:12:49 --> form_fieldset(): Argument #2 ($attributes) must be of type array, string given, called in C:\xampp\htdocs\rtw\app\Views\agences\ajout-agence.php on line 40
+in SYSTEMPATH\Helpers\form_helper.php on line 509.
+ 1 APPPATH\Views\agences\ajout-agence.php(40): form_fieldset('activiteAgence', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(19): view('agences/ajout-agence')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:37:57 --> Invalid file: Agences/ajouter_une_agence.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Agences/ajouter_une_agence.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Agences/ajouter_une_agence', [], true)
+ 3 APPPATH\Controllers\Agences.php(60): view('Agences/ajouter_une_agence', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:39:00 --> Invalid file: Agences/ajouter_une_agence.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Agences/ajouter_une_agence.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Agences/ajouter_une_agence', [], true)
+ 3 APPPATH\Controllers\Agences.php(60): view('Agences/ajouter_une_agence', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:40:00 --> Invalid file: Agences/ajouter_une_agence.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Agences/ajouter_une_agence.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Agences/ajouter_une_agence', [], true)
+ 3 APPPATH\Controllers\Agences.php(60): view('Agences/ajouter_une_agence', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:41:03 --> Invalid file: Agences/ajouter_une_agence.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Agences/ajouter_une_agence.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Agences/ajouter_une_agence', [], true)
+ 3 APPPATH\Controllers\Agences.php(59): view('Agences/ajouter_une_agence')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:41:08 --> Invalid file: Agences/ajouter_une_agence.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Agences/ajouter_une_agence.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('Agences/ajouter_une_agence', [], true)
+ 3 APPPATH\Controllers\Agences.php(59): view('Agences/ajouter_une_agence')
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:42:51 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:42:53 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:43:05 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:43:24 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:43:53 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:44:04 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:45:16 --> Undefined variable $TitreDeLaPage
+in APPPATH\Views\agences\ajout-agence.php on line 2.
+ 1 APPPATH\Views\agences\ajout-agence.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $TitreDeLaPage', 'APPPATH\\Views\\agences\\ajout-agence.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(14): view('agences/ajout-agence')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->accueil()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-23 10:46:46 --> Undefined variable $data
+in APPPATH\Controllers\Agences.php on line 60.
+ 1 APPPATH\Controllers\Agences.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Agences.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
