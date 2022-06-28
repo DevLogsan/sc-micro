@@ -64,6 +64,7 @@ class Agences extends BaseController
             if($_POST) $data['Titre'] = "Corriger votre agence"; // on change le titre si le formulaire n'est pas valide
             echo view('templates/header');
             echo view('agences/ajout-agence', $data);
+            echo view('templates/footer');
         }
         else
         {
