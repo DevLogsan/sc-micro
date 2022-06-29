@@ -70,3 +70,107 @@ in APPPATH\Views\agences\liste-des-agences-modification.php on line 22.
  5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 09:42:39 --> syntax error, unexpected variable "$input"
+in APPPATH\Controllers\Agences.php on line 21.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Agences.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Agences')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Agences')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Agences', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 09:43:08 --> Undefined variable $Titre
+in APPPATH\Views\agences\ajout-agence.php on line 1.
+ 1 APPPATH\Views\agences\ajout-agence.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Titre', 'APPPATH\\Views\\agences\\ajout-agence.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(66): view('agences/ajout-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 09:43:39 --> Undefined variable $Titre
+in APPPATH\Views\agences\ajout-agence.php on line 1.
+ 1 APPPATH\Views\agences\ajout-agence.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Titre', 'APPPATH\\Views\\agences\\ajout-agence.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(66): view('agences/ajout-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajouter_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:05:20 --> Undefined variable $lesAgences
+in APPPATH\Views\agences\liste-des-agences-modification.php on line 37.
+ 1 APPPATH\Views\agences\liste-des-agences-modification.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lesAgences', 'APPPATH\\Views\\agences\\liste-des-agences-modification.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\liste-des-agences-modification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/liste-des-agences-modification', [], true)
+ 5 APPPATH\Controllers\Agences.php(181): view('agences/liste-des-agences-modification', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:07:32 --> Undefined variable $lesAgences
+in APPPATH\Views\agences\liste-des-agences-modification.php on line 37.
+ 1 APPPATH\Views\agences\liste-des-agences-modification.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lesAgences', 'APPPATH\\Views\\agences\\liste-des-agences-modification.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\liste-des-agences-modification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/liste-des-agences-modification', [], true)
+ 5 APPPATH\Controllers\Agences.php(188): view('agences/liste-des-agences-modification', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:07:57 --> Undefined variable $Titre
+in APPPATH\Views\agences\modification-agence.php on line 9.
+ 1 APPPATH\Views\agences\modification-agence.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Titre', 'APPPATH\\Views\\agences\\modification-agence.php', 9)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\modification-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/modification-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(189): view('agences/modification-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:12:20 --> Undefined variable $Titre
+in APPPATH\Views\agences\liste-des-agences-modification.php on line 11.
+ 1 APPPATH\Views\agences\liste-des-agences-modification.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Titre', 'APPPATH\\Views\\agences\\liste-des-agences-modification.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\liste-des-agences-modification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/liste-des-agences-modification', [], true)
+ 5 APPPATH\Controllers\Agences.php(181): view('agences/liste-des-agences-modification', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:18:27 --> Undefined variable $lesAgences
+in APPPATH\Views\agences\liste-des-agences-modification.php on line 37.
+ 1 APPPATH\Views\agences\liste-des-agences-modification.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lesAgences', 'APPPATH\\Views\\agences\\liste-des-agences-modification.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\liste-des-agences-modification.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/liste-des-agences-modification', [], true)
+ 5 APPPATH\Controllers\Agences.php(181): view('agences/liste-des-agences-modification', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:18:50 --> Undefined variable $uneAgence
+in APPPATH\Views\agences\modification-agence.php on line 4.
+ 1 APPPATH\Views\agences\modification-agence.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uneAgence', 'APPPATH\\Views\\agences\\modification-agence.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\modification-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/modification-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(191): view('agences/modification-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 10:27:33 --> Undefined variable $etat
+in APPPATH\Controllers\Agences.php on line 194.
+ 1 APPPATH\Controllers\Agences.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $etat', 'APPPATH\\Controllers\\Agences.php', 194)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

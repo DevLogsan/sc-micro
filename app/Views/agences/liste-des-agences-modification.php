@@ -8,7 +8,7 @@ $infos2 ='<div class="btn btn-danger"> Supprimer <svg xmlns="http://www.w3.org/2
 </svg></div>';
 ?>
 
-<p class="fs-4">Liste des agences modifiables</p>
+<p class="fs-4"><?php echo $Titre ?></p>
 <?php
     if (session()->getFlashdata('status')) // si l'insertion a bien fonctionné, on affiche un message
     {

@@ -1,4 +1,4 @@
-<p class="fs-4">Ajouter une agence</p>
+<p class="fs-4"><?php echo $Titre ?></p>
 <?php
     if (session()->getFlashdata('status')) // si l'insertion a bien fonctionné, on affiche un message
     {
@@ -18,7 +18,7 @@
     <div class="col-md-3">
         <label for="txtNomAgence" class="form-label">Nom</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNomAgence" value="<?= set_value('txtNomAgence') ?>">
-        <?php if($validation->getError('txtNomAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtNomAgence'); ?>
             </div>
@@ -28,7 +28,7 @@
     <div class="col-md-3">
         <label for="txtNomAgenceNorm" class="form-label">Nom (normalisé)</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNomAgenceNorm" value="<?= set_value('txtNomAgenceNorm') ?>">
-        <?php if($validation->getError('txtNomAgenceNorm')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtNomAgenceNorm'); ?>
             </div>
@@ -41,7 +41,7 @@
             <span class="input-group-text">@</span>
         <input type="text" class="form-control" name="txtEmailAgence" value="<?= set_value('txtEmailAgence') ?>">
         </div>
-        <?php if($validation->getError('txtEmailAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtEmailAgence'); ?>
             </div>
@@ -51,7 +51,7 @@
     <div class="col-md-3">
         <label for="txtNumAgence" class="form-label">Numéro</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNumAgence" value="<?= set_value('txtNumAgence') ?>">
-        <?php if($validation->getError('txtNumAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtNumAgence'); ?>
             </div>
@@ -61,7 +61,7 @@
     <div class="col-md-3">
         <label for="txtSigleAgence" class="form-label">Sigle</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtSigleAgence" value="<?= set_value('txtSigleAgence') ?>">
-        <?php if($validation->getError('txtSigleAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtSigleAgence'); ?>
             </div>
@@ -71,7 +71,7 @@
     <div class="col-md-3">
         <label for="txtVilleAgence" class="form-label">Ville</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtVilleAgence" value="<?= set_value('txtVilleAgence') ?>">
-        <?php if($validation->getError('txtVilleAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtVilleAgence'); ?>
             </div>
@@ -81,7 +81,7 @@
     <div class="col-md-3">
         <label for="txtAdresse1Agence" class="form-label">Adresse 1</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtAdresse1Agence" value="<?= set_value('txtAdresse1Agence') ?>">
-        <?php if($validation->getError('txtAdresse1Agence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtAdresse1Agence'); ?>
             </div>
@@ -91,17 +91,12 @@
     <div class="col-md-3">
         <label for="txtAdresse2Agence" class="form-label">Adresse 2</label>
     <input type="text" class="form-control" name="txtAdresse2Agence" value="<?= set_value('txtAdresse2Agence') ?>">
-        <?php if($validation->getError('txtAdresse2Agence')) {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtAdresse2Agence'); ?>
-            </div>
-        <?php } ?>
     </div>
 
     <div class="col-md-3">
         <label for="txtCPAgence" class="form-label">Code postal</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtCPAgence" value="<?= set_value('txtCPAgence') ?>">
-        <?php if($validation->getError('txtCPAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtCPAgence'); ?>
             </div>
@@ -111,7 +106,7 @@
     <div class="col-md-9">
         <label for="txtHoraireAgence" class="form-label">Horaire</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtHoraireAgence" value="<?= set_value('txtHoraireAgence') ?>">
-        <?php if($validation->getError('txtHoraireAgence')) {?>
+        <?php if ($Titre == 'Ajouter une agence | Erreur') {?>
             <div class='alert alert-danger mt-2'>
                 <?= $error = $validation->getError('txtHoraireAgence'); ?>
             </div>

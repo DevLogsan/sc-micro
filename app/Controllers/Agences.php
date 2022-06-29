@@ -16,6 +16,7 @@ class Agences extends BaseController
     public function ajouter_une_agence()
     {
         $data['Titre'] = 'Ajouter une agence';
+        $data['validation'] = ['validation' => \Config\Services::validation()];
 
         $input = $this->validate = ([ //les champs obligatoires
             'txtNomAgence' => 'required',
@@ -61,8 +62,9 @@ class Agences extends BaseController
 
         if (!$this->validate($input, $messages))// formulaire non validé, on renvoie le formulaire
         {
+            if($_POST) $data['Titre'] = "Ajouter une agence | Erreur";
             echo view('templates/header');
-            echo view('agences/ajout-agence', ['validation' => \Config\Services::validation()]);
+            echo view('agences/ajout-agence', $data);
         }
         else
         {
@@ -122,9 +124,12 @@ class Agences extends BaseController
 
     public function modifier_une_agence($AgenceID = NULL)
     {
+        $data['Titre'] = 'Liste des agences modifiables';
+        $data['validation'] = ['validation' => \Config\Services::validation()];
+
         echo view('templates/header');
 
-        $rules = [ // les champs obligatoires
+        $input = [ // les champs obligatoires
             'txtNomAgence' => 'required',
             'txtNomAgenceNorm' => 'required',
             'txtSigleAgence' => 'required|max_length[3]',
@@ -169,7 +174,7 @@ class Agences extends BaseController
         $model = new AgencesModel();
         $data['lesAgences'] = $model->retournerAgences(); // retourne les agences pour la faire fonctionner la liste des agences
 
-        if (!$this->validate($rules, $messages)) // formulaire non validé, on renvoie le formulaire
+        if (!$this->validate($input, $messages)) // formulaire non validé, on renvoie le formulaire
         {
             if ($AgenceID === null) // pas d'agence choisi, on affiche uniquement la liste des agences
             {
@@ -179,41 +184,40 @@ class Agences extends BaseController
             {
                 $data['uneAgence'] = $model->retournerAgences($AgenceID); // retourne les infos de l'agence choisie
                 
+                if($_POST) $data['Titre'] = "Liste des agences modifiables | Erreur";
+                
                 echo view('agences/liste-des-agences-modification', $data);
                 echo view('agences/modification-agence', $data);
             }
         }
-    }
-
-    public function appliquer_modification_agence($AgenceID = NULL)
-    {
-        $model = new AgencesModel();
-
-        $etat = $this->request->getPost('txtActiviteAgence'); // le checkbox est un bool
-
-        if ($etat === null) { // si la case est décoché, cela retourne null
-            $retourne = 0; // on retourne 0 si c'est le cas
-        }
         else
         {
-            $retourne = 1; // sinon on retourne 1
-        }
+            $etat = $this->request->getPost('txtActiviteAgence'); // le checkbox est un bool
 
-        $data = array( // données à remplacer
-            'agence_nom' => $this->request->getPost('txtNomAgence'),
-            'agence_nom_normalise' => $this->request->getPost('txtNomAgenceNorm'),
-            'agence_sigle' => $this->request->getPost('txtSigleAgence'),
-            'agence_tel' => $this->request->getPost('txtNumAgence'),
-            'agence_email' => $this->request->getPost('txtEmailAgence'),
-            'agence_adresse1' => $this->request->getPost('txtAdresse1Agence'),
-            'agence_adresse2' => $this->request->getPost('txtAdresse2Agence'),
-            'agence_code_postal' => $this->request->getPost('txtCPAgence'),
-            'agence_ville' => $this->request->getPost('txtVilleAgence'),
-            'agence_horaires' => $this->request->getPost('txtHoraireAgence'),
-            'agence_etat' => $retourne,
-        );
-        
-        $model->update($AgenceID, $data);
-        return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'agence réussite"); // redirection si l'insertion a fonctionné
+            if ($etat === null) { // si la case est décoché, cela retourne null
+                $retourne = 0; // on retourne 0 si c'est le cas
+            }
+            else
+            {
+                $retourne = 1; // sinon on retourne 1
+            }
+    
+            $data = array( // données à remplacer
+                'agence_nom' => $this->request->getPost('txtNomAgence'),
+                'agence_nom_normalise' => $this->request->getPost('txtNomAgenceNorm'),
+                'agence_sigle' => $this->request->getPost('txtSigleAgence'),
+                'agence_tel' => $this->request->getPost('txtNumAgence'),
+                'agence_email' => $this->request->getPost('txtEmailAgence'),
+                'agence_adresse1' => $this->request->getPost('txtAdresse1Agence'),
+                'agence_adresse2' => $this->request->getPost('txtAdresse2Agence'),
+                'agence_code_postal' => $this->request->getPost('txtCPAgence'),
+                'agence_ville' => $this->request->getPost('txtVilleAgence'),
+                'agence_horaires' => $this->request->getPost('txtHoraireAgence'),
+                'agence_etat' => $retourne,
+            );
+            
+            $model->update($AgenceID, $data);
+            return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'agence réussite"); // redirection si l'insertion a fonctionné
+        }
     }
 }
