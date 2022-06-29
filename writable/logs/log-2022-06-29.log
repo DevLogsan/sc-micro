@@ -18,3 +18,25 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 04:29:25 --> Undefined variable $uneAgence
+in APPPATH\Views\agences\detail.php on line 1.
+ 1 APPPATH\Views\agences\detail.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uneAgence', 'APPPATH\\Views\\agences\\detail.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/detail', [], true)
+ 5 APPPATH\Controllers\Agences.php(13): view('agences/detail')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 04:29:35 --> Undefined variable $uneAgence
+in APPPATH\Views\agences\detail.php on line 1.
+ 1 APPPATH\Views\agences\detail.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uneAgence', 'APPPATH\\Views\\agences\\detail.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/detail', [], true)
+ 5 APPPATH\Controllers\Agences.php(13): view('agences/detail')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
