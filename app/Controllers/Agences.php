@@ -21,11 +21,11 @@ class Agences extends BaseController
             'txtNomAgence' => 'required',
             'txtNomAgenceNorm' => 'required',
             'txtSigleAgence' => 'required|max_length[3]',
-            'txtNumAgence' => 'required|max_length[14]',
+            'txtNumAgence' => 'required|regex_match[/^[0-9]{10}$/]',
             'txtAdresse1Agence' => 'required', // la 2eme adresse n'est pas obligatoire
             'txtEmailAgence' => 'required|valid_email',
             'txtVilleAgence' => 'required|max_length[15]',
-            'txtCPAgence' => 'required|max_length[5]',
+            'txtCPAgence' => 'required|regex_match[/^[0-9]{5}$/]',
             'txtHoraireAgence' => 'required',
             ]);
 
