@@ -40,3 +40,33 @@ in APPPATH\Views\agences\detail.php on line 1.
  7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
  8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 07:35:56 --> Undefined array key "agence_nom_norm"
+in APPPATH\Views\agences\modification-agence.php on line 28.
+ 1 APPPATH\Views\agences\modification-agence.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "agence_nom_norm"', 'APPPATH\\Views\\agences\\modification-agence.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\modification-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/modification-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(185): view('agences/modification-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 07:44:38 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1576.
+ 1 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(692): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Agences.php(215): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-29 07:45:44 --> syntax error, unexpected identifier "anchor", expecting "," or ";"
+in APPPATH\Views\agences\liste-des-agences-modification.php on line 22.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/liste-des-agences-modification', [], true)
+ 3 APPPATH\Controllers\Agences.php(184): view('agences/liste-des-agences-modification', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->modifier_une_agence('2')
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

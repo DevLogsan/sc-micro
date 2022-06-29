@@ -1,6 +1,127 @@
-<h3><?php echo $Titre ?></h3>
-<?php
+<hr class="mx-auto mx-lg-0 my-5">
 
+<?php $validation = \Config\Services::validation(); ?>
+<form method="post" action="<?php echo site_url('Agences/modifier_une_agence')?>" class="row g-3">
+
+    <div class="col-md-3">
+        <label for="txtNomAgence" class="form-label">Nom</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtNomAgence" value="<?php echo $uneAgence['agence_nom'] ?>">
+        <?php if($validation->getError('txtNomAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtNomAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtNomAgenceNorm" class="form-label">Nom (normalisé)</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtNomAgenceNorm" value="<?php echo $uneAgence['agence_nom_normalise'] ?>">
+        <?php if($validation->getError('txtNomAgenceNorm')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtNomAgenceNorm'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtEmailAgence" class="form-label">E-Mail</label><span style="color:red">*</span>
+        <div class="input-group has-validation">
+            <span class="input-group-text">@</span>
+        <input type="text" class="form-control" name="txtEmailAgence" value="<?php echo $uneAgence['agence_email'] ?>">
+        </div>
+        <?php if($validation->getError('txtEmailAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtEmailAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtNumAgence" class="form-label">Numéro</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtNumAgence" value="<?php echo $uneAgence['agence_tel'] ?>">
+        <?php if($validation->getError('txtNumAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtNumAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtSigleAgence" class="form-label">Sigle</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtSigleAgence" value="<?php echo $uneAgence['agence_sigle'] ?>">
+        <?php if($validation->getError('txtSigleAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtSigleAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtVilleAgence" class="form-label">Ville</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtVilleAgence" value="<?php echo $uneAgence['agence_ville'] ?>">
+        <?php if($validation->getError('txtVilleAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtVilleAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtAdresse1Agence" class="form-label">Adresse 1</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtAdresse1Agence" value="<?php echo $uneAgence['agence_adresse1'] ?>">
+        <?php if($validation->getError('txtAdresse1Agence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtAdresse1Agence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtAdresse2Agence" class="form-label">Adresse 2</label>
+    <input type="text" class="form-control" name="txtAdresse2Agence" value="<?php echo $uneAgence['agence_adresse2'] ?>">
+        <?php if($validation->getError('txtAdresse2Agence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtAdresse2Agence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtCPAgence" class="form-label">Code postal</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtCPAgence" value="<?php echo $uneAgence['agence_code_postal'] ?>">
+        <?php if($validation->getError('txtCPAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtCPAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-9">
+        <label for="txtHoraireAgence" class="form-label">Horaire</label><span style="color:red">*</span>
+    <input type="text" class="form-control" name="txtHoraireAgence" value="<?php echo $uneAgence['agence_horaires'] ?>">
+        <?php if($validation->getError('txtHoraireAgence')) {?>
+            <div class='alert alert-danger mt-2'>
+                <?= $error = $validation->getError('txtHoraireAgence'); ?>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-12">
+        <div class="form-check">
+        <input class="form-check-input" name="txtActiviteAgence" type="checkbox">
+        <label class="form-check-label" for="invalidCheck3">
+            En activité
+        </label>
+        </div>
+    </div>
+
+    <label><span style="color:red">*</span> champs obligatoires</label>
+    <div class="col-12">
+        <button class="btn btn-primary" style="background-color: #043e6b;" type="submit">Modifier</button>
+    </div>
+    </form>
+
+<?php
 if ($uneAgence['agence_etat'] == 1) { // vérification de l'etat de l'entreprise
     $etat = true;
 }
@@ -8,57 +129,4 @@ else
 {
     $etat = false;
 }
-//if ($Titre == 'Corriger votre agence')....
-                                         echo service('validation')->listErrors(); // mise en place de la validation
-echo form_open('Agences/modifier_une_agence/'.$uneAgence['agence_id']);
-echo csrf_field(); // protection contre le CSRF (cross-site request forgery)
-
-echo form_label("Nom : ", "txtNomAgence");
-echo form_input('txtNomAgence', $uneAgence['agence_nom']);
-echo '<br>';
-
-echo form_label("Nom (normalisé) : ", "txtNomAgenceNorm");
-echo form_input('txtNomAgenceNorm', $uneAgence['agence_nom_normalise']);
-echo '<br>';
-
-echo form_label("Sigle : ", "txtSigleAgence");
-echo form_input('txtSigleAgence', $uneAgence['agence_sigle']);
-echo '<br>';
-
-echo form_label("Numéro (fixe): ", "txtNumAgence");
-echo form_input('txtNumAgence', $uneAgence['agence_tel']);
-echo '<br>';
-
-echo form_label("Adresse 1 : ", "txtAdresse1Agence");
-echo form_input('txtAdresse1Agence', $uneAgence['agence_adresse1']);
-echo '<br>';
-
-echo form_label("Adresse 2 : ", "txtAdresse2Agence");
-echo form_input('txtAdresse2Agence', $uneAgence['agence_adresse2']);
-echo '<br>';
-
-echo form_label("E-mail : ", "txtEmailAgence");
-echo form_input('txtEmailAgence', $uneAgence['agence_email']);
-echo '<br>';
-
-echo form_label("Ville : ", "txtVilleAgence");
-echo form_input('txtVilleAgence', $uneAgence['agence_ville']);
-echo '<br>';
-
-echo form_label("Code postal : ", "txtCPAgence");
-echo form_input('txtCPAgence', $uneAgence['agence_code_postal']);
-echo '<br>';
-
-echo form_label("Horaire : ", "txtHoraireAgence");
-echo form_textarea('txtHoraireAgence', $uneAgence['agence_horaires']);
-echo '<br>';
-echo form_label("(exemple : Lundi-vendredi 9h-12h 14h-18h30. Samedi 10h-12h 14h-17h)", "");
-echo '<br>';
-
-echo form_checkbox('txtActiviteAgence', '', $etat);
-echo form_label("En activité", "txtActiviteAgence");
-echo '<br>';
-
-echo form_submit('submit', 'Modifier');
-echo form_close();
 ?>
