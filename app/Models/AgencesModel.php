@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 class AgencesModel extends Model
 {
     protected $table = 'agences'; //définition de la table principale
+    protected $primaryKey = 'agence_id';
     protected $allowedFields = [
         'agence_nom',
         'agence_nom_normalise',

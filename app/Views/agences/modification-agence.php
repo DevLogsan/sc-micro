@@ -1,7 +1,19 @@
 <hr class="mx-auto mx-lg-0 my-5">
 
+<?php
+    if (session()->getFlashdata('status'))
+    {
+        ?>
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>Info : </strong> <?= session()->getFlashdata('status') ?>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
+            </div>
+        <?php
+    }
+?>
+
 <?php $validation = \Config\Services::validation(); ?>
-<form method="post" action="<?php echo site_url('Agences/modifier_une_agence')?>" class="row g-3">
+<form method="post" action="<?php echo site_url('Agences/appliquer_modification_agence/'.$uneAgence['agence_id'])?>" class="row g-3">
 
     <div class="col-md-3">
         <label for="txtNomAgence" class="form-label">Nom</label><span style="color:red">*</span>

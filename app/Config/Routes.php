@@ -36,6 +36,8 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Agences::accueil');
+$routes->get('/Agences/modifier_une_agence/(:num)', 'Agences::modifier_une_agence/$1');
+$routes->put('/agences/appliquer_modification_agence/(:num)', 'Agences::appliquer_modification_agence/$1');
 
 /*
  * --------------------------------------------------------------------
