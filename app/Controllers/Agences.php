@@ -15,9 +15,9 @@ class Agences extends BaseController
 
     public function ajouter_une_agence()
     {
-        $data['Titre'] = 'Ajouter une agence'; // titre de la page
+        $data['Titre'] = 'Ajouter une agence';
 
-        $rules = [ //les champs obligatoires
+        $input = $this->validate = ([ //les champs obligatoires
             'txtNomAgence' => 'required',
             'txtNomAgenceNorm' => 'required',
             'txtSigleAgence' => 'required|max_length[3]',
@@ -27,17 +27,17 @@ class Agences extends BaseController
             'txtVilleAgence' => 'required|max_length[15]',
             'txtCPAgence' => 'required|max_length[5]',
             'txtHoraireAgence' => 'required',
-            ];
+            ]);
 
         $messages = [ //message à renvoyer en cas de non-respect des règles de validation
             'txtNomAgence' => [
-            'required' => "Veuillez renseigner le nom de l'agence",
+            'required' => "Veuillez renseigner le nom",
             ],
             'txtNomAgenceNorm' => [
-            'required' => "Veuillez renseigner le nom (normalisé) de l'agence",
+            'required' => "Veuillez renseigner le nom (normalisé)",
             ],
             'txtSigleAgence' => [
-                'required' => "Veuillez renseigner le sigle",
+            'required' => "Veuillez renseigner le sigle (3 char. max)",
             ],
             'txtNumAgence' => [
                 'required' => "Veuillez renseigner le numéro",
@@ -46,25 +46,23 @@ class Agences extends BaseController
                 'required' => "Veuillez renseigner l'adresse",
             ],
             'txtEmailAgence' => [
-                'required' => "Veuillez renseigner l'e-mail",
+                'valid_email' => "Veuillez renseigner une adresse mail valide",
             ],
             'txtVilleAgence' => [
                 'required' => "Veuillez renseigner la ville",
             ],
             'txtCPAgence' => [
-                'required' => "Veuillez renseigner le code postal",
+                'required' => "Veuillez renseigner le CP",
             ],
             'txtHoraireAgence' => [
                 'required' => "Veuillez renseigner les horaires",
             ],
         ];
 
-        if (!$this->validate($rules, $messages))// formulaire non validé, on renvoie le formulaire
+        if (!$this->validate($input, $messages))// formulaire non validé, on renvoie le formulaire
         {
-            if($_POST) $data['Titre'] = "Corriger votre agence"; // on change le titre si le formulaire n'est pas valide
             echo view('templates/header');
-            echo view('agences/ajout-agence', $data);
-            echo view('templates/footer');
+            echo view('agences/ajout-agence', ['validation' => \Config\Services::validation()]);
         }
         else
         {

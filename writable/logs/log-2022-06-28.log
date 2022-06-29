@@ -1,0 +1,22 @@
+CRITICAL - 2022-06-28 10:14:50 --> Undefined variable $validation
+in APPPATH\Views\agences\ajout.php on line 7.
+ 1 APPPATH\Views\agences\ajout.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'APPPATH\\Views\\agences\\ajout.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout', [], true)
+ 5 APPPATH\Controllers\Agences.php(19): view('agences/ajout')
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajout()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-28 10:52:12 --> Undefined variable $Titre
+in APPPATH\Views\agences\ajout-agence.php on line 1.
+ 1 APPPATH\Views\agences\ajout-agence.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Titre', 'APPPATH\\Views\\agences\\ajout-agence.php', 1)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\agences\\ajout-agence.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('agences/ajout-agence', [], true)
+ 5 APPPATH\Controllers\Agences.php(63): view('agences/ajout-agence', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Agences->ajout()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agences))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
