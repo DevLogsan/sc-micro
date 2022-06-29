@@ -1,17 +1,5 @@
 <hr class="mx-auto mx-lg-0 my-5">
 
-<?php
-    if (session()->getFlashdata('status'))
-    {
-        ?>
-            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                <strong>Info : </strong> <?= session()->getFlashdata('status') ?>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
-            </div>
-        <?php
-    }
-?>
-
 <?php $validation = \Config\Services::validation(); ?>
 <form method="post" action="<?php echo site_url('Agences/appliquer_modification_agence/'.$uneAgence['agence_id'])?>" class="row g-3">
 
@@ -120,8 +108,16 @@
 
     <div class="col-12">
         <div class="form-check">
-        <input class="form-check-input" name="txtActiviteAgence" type="checkbox">
-        <label class="form-check-label" for="invalidCheck3">
+            <?php
+                if ($uneAgence['agence_etat'] == 1) { // vérification de l'etat de l'entreprise
+                    echo '<input class="form-check-input" name="txtActiviteAgence" type="checkbox" checked>';
+                }
+                else
+                {
+                    echo '<input class="form-check-input" name="txtActiviteAgence" type="checkbox">';
+                }
+            ?>
+        <label class="form-check-label">
             En activité
         </label>
         </div>
@@ -131,14 +127,4 @@
     <div class="col-12">
         <button class="btn btn-primary" style="background-color: #043e6b;" type="submit">Modifier</button>
     </div>
-    </form>
-
-<?php
-if ($uneAgence['agence_etat'] == 1) { // vérification de l'etat de l'entreprise
-    $etat = true;
-}
-else
-{
-    $etat = false;
-}
-?>
+</form>
