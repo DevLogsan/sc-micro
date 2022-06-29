@@ -14,7 +14,7 @@ $infos2 ='<div class="btn btn-danger"> Supprimer <svg xmlns="http://www.w3.org/2
     {
         ?>
             <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                <strong>Info : </strong> <?= session()->getFlashdata('status') ?>
+                <strong>Information : </strong> <?= session()->getFlashdata('status') ?>
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
             </div>
         <?php

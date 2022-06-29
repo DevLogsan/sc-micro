@@ -1,4 +1,15 @@
 <p class="fs-4">Ajouter une agence</p>
+<?php
+    if (session()->getFlashdata('status')) // si l'insertion a bien fonctionné, on affiche un message
+    {
+        ?>
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>Information : </strong> <?= session()->getFlashdata('status') ?>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
+            </div>
+        <?php
+    }
+?>
 <hr class="mx-auto mx-lg-0 my-5">
 
 <?php $validation = \Config\Services::validation(); ?>

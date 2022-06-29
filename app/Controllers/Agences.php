@@ -93,7 +93,7 @@ class Agences extends BaseController
             $model = new AgencesModel(); // instanciation du modèle
             $model->save($data);
 
-            return redirect()->to('Agences/accueil'); // redirection si l'insertion a fonctionné
+            return redirect()->to('Agences/ajouter_une_agence')->with('status', "L'agence a bien été ajoutée");; // redirection si l'insertion a fonctionné
         }
     }
 
