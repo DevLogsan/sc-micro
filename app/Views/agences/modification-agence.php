@@ -7,9 +7,7 @@
         <label for="txtNomAgence" class="form-label">Nom</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNomAgence" value="<?php echo $uneAgence['agence_nom'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtNomAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtNomAgence'); ?>
         <?php } ?>
     </div>
 
@@ -17,9 +15,7 @@
         <label for="txtNomAgenceNorm" class="form-label">Nom (normalisé)</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNomAgenceNorm" value="<?php echo $uneAgence['agence_nom_normalise'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtNomAgenceNorm'); ?>
-            </div>
+            <?= $error = $validation->getError('txtNomAgenceNorm'); ?>
         <?php } ?>
     </div>
 
@@ -30,9 +26,7 @@
         <input type="text" class="form-control" name="txtEmailAgence" value="<?php echo $uneAgence['agence_email'] ?>">
         </div>
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtEmailAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtEmailAgence'); ?>
         <?php } ?>
     </div>
 
@@ -40,9 +34,7 @@
         <label for="txtNumAgence" class="form-label">Numéro</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtNumAgence" value="<?php echo $uneAgence['agence_tel'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtNumAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtNumAgence'); ?>
         <?php } ?>
     </div>
 
@@ -50,9 +42,7 @@
         <label for="txtSigleAgence" class="form-label">Sigle</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtSigleAgence" value="<?php echo $uneAgence['agence_sigle'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtSigleAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtSigleAgence'); ?>
         <?php } ?>
     </div>
 
@@ -60,9 +50,7 @@
         <label for="txtVilleAgence" class="form-label">Ville</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtVilleAgence" value="<?php echo $uneAgence['agence_ville'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtVilleAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtVilleAgence'); ?>
         <?php } ?>
     </div>
 
@@ -70,9 +58,7 @@
         <label for="txtAdresse1Agence" class="form-label">Adresse 1</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtAdresse1Agence" value="<?php echo $uneAgence['agence_adresse1'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtAdresse1Agence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtAdresse1Agence'); ?>
         <?php } ?>
     </div>
 
@@ -85,9 +71,7 @@
         <label for="txtCPAgence" class="form-label">Code postal</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtCPAgence" value="<?php echo $uneAgence['agence_code_postal'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtCPAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtCPAgence'); ?>
         <?php } ?>
     </div>
 
@@ -95,9 +79,7 @@
         <label for="txtHoraireAgence" class="form-label">Horaire</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtHoraireAgence" value="<?php echo $uneAgence['agence_horaires'] ?>">
         <?php if ($Titre == 'Liste des agences modifiables | Erreur') {?>
-            <div class='alert alert-danger mt-2'>
-                <?= $error = $validation->getError('txtHoraireAgence'); ?>
-            </div>
+            <?= $error = $validation->getError('txtHoraireAgence'); ?>
         <?php } ?>
     </div>
 
