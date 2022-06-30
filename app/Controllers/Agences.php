@@ -220,4 +220,11 @@ class Agences extends BaseController
             return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'agence réussite"); // redirection si l'insertion a fonctionné
         }
     }
+
+    public function supprimer_une_agence($AgenceID = NULL)
+    {
+        $model = new AgencesModel();
+        $model->delete(['agence_id' => $AgenceID]);
+        return redirect()->to('Agences/modifier_une_agence')->with('status', "L'agence a bien été supprimé");
+    }
 }

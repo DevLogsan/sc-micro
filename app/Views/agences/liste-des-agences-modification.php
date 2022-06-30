@@ -36,7 +36,7 @@ $infos2 ='<div class="btn btn-danger"> Supprimer <svg xmlns="http://www.w3.org/2
         <?php
             foreach ($lesAgences as $uneAgence) :
                 echo '<tr><th scope="row">'. $uneAgence["agence_id"] .'</th><td>'. $uneAgence["agence_nom"] .'</td><td>'. $uneAgence["agence_tel"] .'</td><td>'. $uneAgence["agence_email"] .'</td>';
-                echo '<td>'. anchor('Agences/modifier_une_agence/'. $uneAgence["agence_id"], $infos) .' '. anchor('Agences/'. $uneAgence["agence_id"], $infos2) .'</td></tr>';
+                echo '<td>'. anchor('Agences/modifier_une_agence/'. $uneAgence["agence_id"], $infos) .' '. anchor('Agences/supprimer_une_agence/'. $uneAgence["agence_id"], $infos2) .'</td></tr>';
             endforeach
             ?>
     </tbody>
