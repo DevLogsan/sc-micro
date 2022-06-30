@@ -16,14 +16,27 @@
         <div class="offcanvas-lg offcanvas-end flex-grow-1">
             <div class="offcanvas-body p-4 pt-0 p-lg-0">
                 <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
-                    <li class="nav-item col-6 col-lg-auto">
-                        <a class="nav-link py-2 px-0 px-lg-2" href="<?php echo site_url('Agences/ajouter_une_agence') ?>">Ajouter une agence</a>
+                    <li class="nav-item dropdown nav-item col-6 col-lg-auto">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Agences</a>
+                        <ul class="dropdown-menu">
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Agences/ajouter_une_agence') ?>">Ajouter une agence</a>
+                            </li>
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Agences/modifier_une_agence') ?>">Modifier une agence</a>
+                            </li>
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Agences/liste_des_agences') ?>">Liste des agences</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="nav-item col-6 col-lg-auto">
-                        <a class="nav-link py-2 px-0 px-lg-2" href="<?php echo site_url('Agences/modifier_une_agence') ?>">Modifier une agence</a>
-                    </li>
-                    <li class="nav-item col-6 col-lg-auto">
-                        <a class="nav-link py-2 px-0 px-lg-2 " href="<?php echo site_url('Agences/liste_des_agences') ?>">Liste des agences</a>
+                    <li class="nav-item dropdown nav-item col-6 col-lg-auto">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Utilisateurs</a>
+                        <ul class="dropdown-menu">
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateur/ajouter_un_utilisateur') ?>">Ajouter un utilisateur</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
