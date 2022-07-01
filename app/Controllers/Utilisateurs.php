@@ -3,13 +3,15 @@
 namespace App\Controllers; //Namespace pour utiliser fct contrôleur
 use CodeIgniter\Controller;
 use App\Models\UtilisateursModel; //Namespace pour utiliser fct Modèle (new UtilisateursModel)
+use App\Models\AgencesModel;
 helper(['url', 'assets', 'form']); //pour utiliser le helper dans tout le controller
 
 class Utilisateurs extends BaseController
 {
     function __construct()
     {
-        $this->model = new UtilisateursModel();
+        $this->modelUtilisateurs = new UtilisateursModel(); // instanciation du modèle
+        $this->modelAgences = new AgencesModel(); // instanciation du modèle
     }
 
     public function ajouter_un_utilisateur()
@@ -63,8 +65,8 @@ class Utilisateurs extends BaseController
         {
             if($_POST) $data['Titre'] = "Ajouter un utilisateur | Erreur"; // le titre change si le formulaire est incorrect.
                                                                             // Dans la view, si le titre change alors on affiche les messages d'erreurs. cela évite d'avoir à afficher directement les messages d'erreurs.
-            $data['lesUtilisateurs'] = $this->model->retournerUtilisateurs(); // on retourne les utilisateurs
-
+            $data['lesUtilisateurs'] = $this->modelUtilisateurs->retournerUtilisateurs(); // on retourne les utilisateurs
+            $data['lesAgences'] = $this->modelAgences->retournerAgences();
             echo view('templates/header');
             echo view('utilisateurs/ajout-utilisateur', $data);
         }
@@ -101,8 +103,8 @@ class Utilisateurs extends BaseController
 
     public function liste_des_utilisateurs()
     {
-        $model = new UtilisateursModel();
-        $data['lesUtilisateurs'] = $model->retournerUtilisateurs();
+        $modelUtilisateurs = new UtilisateursModel();
+        $data['lesUtilisateurs'] = $modelUtilisateurs->retournerUtilisateurs();
 
         echo view('templates/header');
         echo view('utilisateurs/liste-des-utilisateurs', $data);
@@ -110,8 +112,8 @@ class Utilisateurs extends BaseController
 
     public function details_utilisateur($UtilisateurID = NULL)
     {
-        $model = new UtilisateursModel();
-        $data['unUtilisateur'] = $model->retournerParametreUtilisateur($UtilisateurID); // récup une agence depuis le modèle
+        $modelUtilisateurs = new UtilisateursModel();
+        $data['unUtilisateur'] = $modelUtilisateurs->retournerParametreUtilisateur($UtilisateurID); // récup une agence depuis le modèle
 
         if(empty($data['unUtilisateur'])) // si pas d'agence
         {

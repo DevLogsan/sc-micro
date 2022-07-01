@@ -285,3 +285,64 @@ in APPPATH\Views\utilisateurs\details-utilisateur.php on line 11.
  5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 03:59:29 --> Uninitialized string offset 0
+in SYSTEMPATH\CodeIgniter.php on line 846.
+ 1 SYSTEMPATH\CodeIgniter.php(846): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 0', 'SYSTEMPATH\\CodeIgniter.php', 846)
+ 2 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:28:04 --> Too few arguments to function App\Models\UtilisateursModel::retournerParametreUtilisateur(), 0 passed in C:\xampp\htdocs\rtw\app\Controllers\Utilisateurs.php on line 66 and exactly 1 expected
+in APPPATH\Models\UtilisateursModel.php on line 43.
+ 1 APPPATH\Controllers\Utilisateurs.php(66): App\Models\UtilisateursModel->retournerParametreUtilisateur()
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:28:22 --> Call to undefined method App\Models\UtilisateursModel::retournerUtilisateur
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Utilisateurs.php(66): CodeIgniter\Model->__call('retournerUtilisateur', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:41:49 --> Class "App\Controllers\AgencesModel" not found
+in APPPATH\Controllers\Utilisateurs.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Utilisateurs->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:42:17 --> Class "App\Controllers\AgencesModel" not found
+in APPPATH\Controllers\Utilisateurs.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(858): App\Controllers\Utilisateurs->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:42:39 --> Call to undefined method App\Models\AgencesModel::retournerUtilisateurs
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Utilisateurs.php(68): CodeIgniter\Model->__call('retournerUtilisateurs', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:47:20 --> Attempt to read property "agence_nom" on array
+in APPPATH\Views\utilisateurs\ajout-utilisateur.php on line 34.
+ 1 APPPATH\Views\utilisateurs\ajout-utilisateur.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "agence_nom" on array', 'APPPATH\\Views\\utilisateurs\\ajout-utilisateur.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\utilisateurs\\ajout-utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('utilisateurs/ajout-utilisateur', [], true)
+ 5 APPPATH\Controllers\Utilisateurs.php(71): view('utilisateurs/ajout-utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-01 04:47:33 --> Undefined variable $value
+in APPPATH\Views\utilisateurs\ajout-utilisateur.php on line 34.
+ 1 APPPATH\Views\utilisateurs\ajout-utilisateur.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\utilisateurs\\ajout-utilisateur.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\utilisateurs\\ajout-utilisateur.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('utilisateurs/ajout-utilisateur', [], true)
+ 5 APPPATH\Controllers\Utilisateurs.php(71): view('utilisateurs/ajout-utilisateur', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
