@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers; //Namespace pour utiliser fct contrôleur
 use CodeIgniter\Controller;
-use App\Models\AgencesModel;
-helper(['url', 'assets', 'form']);
+use App\Models\AgencesModel; //Namespace pour utiliser fct Modèle (new AgencesModel)
+helper(['url', 'assets', 'form']); //pour utiliser le helper dans tout le controller
 
 class Agences extends BaseController
 {
@@ -62,8 +62,8 @@ class Agences extends BaseController
 
         if (!$this->validate($input, $messages))// formulaire non validé, on renvoie le formulaire
         {
-            if($_POST) $data['Titre'] = "Ajouter une agence | Erreur";
-            echo view('templates/header');
+            if($_POST) $data['Titre'] = "Ajouter une agence | Erreur"; // le titre change si le formulaire est incorrect.
+            echo view('templates/header');                             // Dans la view, si le titre change alors on affiche les messages d'erreurs. cela évite d'avoir à afficher directement les messages d'erreurs.
             echo view('agences/ajout-agence', $data);
         }
         else
@@ -93,7 +93,7 @@ class Agences extends BaseController
             );
 
             $model = new AgencesModel(); // instanciation du modèle
-            $model->save($data);
+            $model->save($data); // on envoie dans la base de donnée
 
             return redirect()->to('Agences/ajouter_une_agence')->with('status', "L'agence a bien été ajoutée");; // redirection si l'insertion a fonctionné
         }
@@ -101,8 +101,8 @@ class Agences extends BaseController
 
     public function liste_des_agences()
     {
-        $model = new AgencesModel();
-        $data['lesAgences'] = $model->retournerAgences();
+        $model = new AgencesModel(); // instanciation du modèle
+        $data['lesAgences'] = $model->retournerAgences(); // on retourne toutes les agences
 
         echo view('templates/header');
         echo view('agences/liste-des-agences', $data);
@@ -110,14 +110,13 @@ class Agences extends BaseController
 
     public function details_agence($AgenceID = NULL)
     {
-        $model = new AgencesModel();
+        $model = new AgencesModel(); // instanciation du modèle
         $data['uneAgence'] = $model->retournerAgences($AgenceID); // récup une agence depuis le modèle
 
-        if(empty($data['uneAgence'])) // si pas d'agence
+        if(empty($data['uneAgence'])) // si pas d'agence (ex: http://localhost/index.php/Agences/details_agence/9999)
         {
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound(); // on affichera le mesage d'erreur de codeigniter
         }
-        $data['Titre'] = $data['uneAgence']['agence_nom'];
         echo view('templates/header');
         echo view('agences/details-agence', $data);
     }
@@ -171,7 +170,7 @@ class Agences extends BaseController
             ],
         ];
 
-        $model = new AgencesModel();
+        $model = new AgencesModel(); // instanciation du modèle
         $data['lesAgences'] = $model->retournerAgences(); // retourne les agences pour la faire fonctionner la liste des agences
 
         if (!$this->validate($input, $messages)) // formulaire non validé, on renvoie le formulaire
@@ -184,13 +183,13 @@ class Agences extends BaseController
             {
                 $data['uneAgence'] = $model->retournerAgences($AgenceID); // retourne les infos de l'agence choisie
                 
-                if($_POST) $data['Titre'] = "Liste des agences modifiables | Erreur";
-                
+                if($_POST) $data['Titre'] = "Liste des agences modifiables | Erreur";   // le titre change si le formulaire est incorrect.
+                                                                                        // Dans la view, si le titre change alors on affiche les messages d'erreurs. cela évite d'avoir à afficher directement les messages d'erreurs.
                 echo view('agences/liste-des-agences-modification', $data);
                 echo view('agences/modification-agence', $data);
             }
         }
-        else
+        else // le formulaire est correct
         {
             $etat = $this->request->getPost('txtActiviteAgence'); // le checkbox est un bool
 
@@ -202,7 +201,7 @@ class Agences extends BaseController
                 $retourne = 1; // sinon on retourne 1
             }
     
-            $data = array( // données à remplacer
+            $data = array( // données à mettre à jour
                 'agence_nom' => $this->request->getPost('txtNomAgence'),
                 'agence_nom_normalise' => $this->request->getPost('txtNomAgenceNorm'),
                 'agence_sigle' => $this->request->getPost('txtSigleAgence'),
@@ -223,8 +222,8 @@ class Agences extends BaseController
 
     public function supprimer_une_agence($AgenceID = NULL)
     {
-        $model = new AgencesModel();
-        $model->delete(['agence_id' => $AgenceID]);
-        return redirect()->to('Agences/modifier_une_agence')->with('status', "L'agence a bien été supprimé");
+        $model = new AgencesModel(); // instanciation du modèle
+        $model->delete(['agence_id' => $AgenceID]); // on supprime la ligne dont l'id est égal à celui sélectionné dans la vue
+        return redirect()->to('Agences/modifier_une_agence')->with('status', "L'agence a bien été supprimé"); // redirection + affichage d'un message de confirmation
     }
 }

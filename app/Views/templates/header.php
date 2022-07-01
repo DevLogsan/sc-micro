@@ -34,7 +34,13 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Utilisateurs</a>
                         <ul class="dropdown-menu">
                             <li class="py-2 px-0 px-lg-2">
-                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateur/ajouter_un_utilisateur') ?>">Ajouter un utilisateur</a>
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/ajouter_un_utilisateur') ?>">Ajouter un utilisateur</a>
+                            </li>
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/modifier_un_utilisateur') ?>">Modifier un utilisateur</a>
+                            </li>
+                            <li class="py-2 px-0 px-lg-2">
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/liste_des_utilisateurs') ?>">Liste des utilisateurs</a>
                             </li>
                         </ul>
                     </li>

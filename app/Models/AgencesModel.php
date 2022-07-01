@@ -21,6 +21,8 @@ class AgencesModel extends Model
         'agence_etat',
     ];
 
+    // inutile de mettre un constructeur + pose problème lorsqu'on en met un ici
+
     public function retournerAgences($AgenceID = false)
     {
         if ($AgenceID === false) // pas de n° d'agences en paramètre, on retourne toutes les agences
