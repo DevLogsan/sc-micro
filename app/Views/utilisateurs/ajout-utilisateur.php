@@ -14,7 +14,7 @@
 <?php $validation = \Config\Services::validation(); ?>
 <form method="post" action="<?php echo site_url('Utilisateurs/ajouter_un_utilisateur')?>" class="row g-3">
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <label for="txtLoginUtilisateur" class="form-label">Login</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtLoginUtilisateur" value="<?= set_value('txtLoginUtilisateur') ?>">
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
@@ -22,7 +22,7 @@
         <?php } ?>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
         <label for="txtPseudoUtilisateur" class="form-label">Pseudo</label><span style="color:red">*</span>
     <input type="text" class="form-control" name="txtPseudoUtilisateur" value="<?= set_value('txtPseudoUtilisateur') ?>">
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
@@ -30,7 +30,7 @@
         <?php } ?>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
     <label for="txtAgence" class="form-label">Agence</label><span style="color:red">*</span>
         <select class="form-select">
             <?php foreach($lesAgences as $uneAgence): ?>

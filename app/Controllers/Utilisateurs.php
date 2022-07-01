@@ -20,44 +20,28 @@ class Utilisateurs extends BaseController
         $data['validation'] = ['validation' => \Config\Services::validation()];
 
         $input = $this->validate = ([ //les champs obligatoires
-            'txtNomAgence' => 'required',
-            'txtNomAgenceNorm' => 'required',
-            'txtSigleAgence' => 'required|max_length[3]',
-            'txtNumAgence' => 'required|regex_match[/^[0-9]{10}$/]',
-            'txtAdresse1Agence' => 'required', // la 2eme adresse n'est pas obligatoire
-            'txtEmailAgence' => 'required|valid_email',
-            'txtVilleAgence' => 'required|max_length[15]',
-            'txtCPAgence' => 'required|regex_match[/^[0-9]{5}$/]',
-            'txtHoraireAgence' => 'required',
+            'txtLoginUtilisateur' => 'required|max_length[40]',
+            'txtPseudoUtilisateur' => 'required',
+            'txtAgence' => 'required',
+            'txtEmailUtilisateur' => 'required|valid_email',
+            'txtMotdepasseUtilisateur' => 'required', // la 2eme adresse n'est pas obligatoire
             ]);
 
         $messages = [ //message à renvoyer en cas de non-respect des règles de validation
-            'txtNomAgence' => [
-            'required' => "Veuillez renseigner le nom",
+            'txtLoginUtilisateur' => [
+            'required' => "Veuillez renseigner le login",
             ],
-            'txtNomAgenceNorm' => [
-            'required' => "Veuillez renseigner le nom (normalisé)",
+            'txtPseudoUtilisateur' => [
+            'required' => "Veuillez renseigner le pseudo",
             ],
-            'txtSigleAgence' => [
-            'required' => "Veuillez renseigner le sigle (3 char. max)",
+            'txtAgence' => [
+            'required' => "Veuillez choisir l'agence",
             ],
-            'txtNumAgence' => [
-                'required' => "Veuillez renseigner le numéro",
+            'txtEmailUtilisateur' => [
+                'required' => "Veuillez renseigner une adresse mail valide",
             ],
-            'txtAdresse1Agence' => [
-                'required' => "Veuillez renseigner l'adresse",
-            ],
-            'txtEmailAgence' => [
-                'valid_email' => "Veuillez renseigner une adresse mail valide",
-            ],
-            'txtVilleAgence' => [
-                'required' => "Veuillez renseigner la ville",
-            ],
-            'txtCPAgence' => [
-                'required' => "Veuillez renseigner le CP",
-            ],
-            'txtHoraireAgence' => [
-                'required' => "Veuillez renseigner les horaires",
+            'txtMotdepasseUtilisateur' => [
+                'required' => "Veuillez renseigner le mot de passe",
             ],
         ];
 
