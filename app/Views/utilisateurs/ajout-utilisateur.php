@@ -34,7 +34,7 @@
     <label for="txtAgence" class="form-label">Agence</label><span style="color:red">*</span>
         <select class="form-select">
             <?php foreach($lesAgences as $uneAgence): ?>
-                <option value="txtAgence"><?= $uneAgence['agence_nom'] ?></option>
+                <option name="txtAgence" value="<?= $uneAgence['agence_id'] ?>"><?= $uneAgence['agence_nom'] ?></option>
             <?php endforeach ?>
         </select>
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>

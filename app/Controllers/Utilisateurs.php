@@ -56,28 +56,30 @@ class Utilisateurs extends BaseController
         }
         else
         {
-            $etat = $this->request->getVar('txtActiviteAgence'); // le checkbox est un bool
+            $temps_valide = 15;
 
-            if ($etat === null) { // si la case est décoché, cela retourne null
-                $retourne = 0; // on retourne 0 si c'est le cas
-            }
-            else
-            {
-                $retourne = 1; // sinon on retourne 1
-            }
+            $time = new DateTime('2011-11-17 05:05');
+            $time->add(new DateInterval('PT' . $temps_valide . 'M'));
+
+            $stamp = $time->format('Y-m-d H:i:s');
+
+            $date_derniere_activite = date('Y-m-d H:i:s');
 
             $data = array( // données à insérer
-                'agence_nom' => $this->request->getPost('txtNomAgence'),
-                'agence_nom_normalise' => $this->request->getPost('txtNomAgenceNorm'),
-                'agence_sigle' => $this->request->getPost('txtSigleAgence'),
-                'agence_tel' => $this->request->getPost('txtNumAgence'),
-                'agence_email' => $this->request->getPost('txtEmailAgence'),
-                'agence_adresse1' => $this->request->getPost('txtAdresse1Agence'),
-                'agence_adresse2' => $this->request->getPost('txtAdresse2Agence'),
-                'agence_code_postal' => $this->request->getPost('txtCPAgence'),
-                'agence_ville' => $this->request->getPost('txtVilleAgence'),
-                'agence_horaires' => $this->request->getPost('txtHoraireAgence'),
-                'agence_etat' => $retourne,
+                'agence_id' => $this->request->getPost('txtAgence'),
+                'utilisateur_login' => $this->request->getPost('txtLoginUtilisateur'),
+                'utilisateur_pseudo' => $this->request->getPost('txtPseudoUtilisateur'),
+                'utilisateur_email' => $this->request->getPost('txtEmailUtilisateur'),
+                //'utilisateur_pass_hash' => $this->request->getPost('txtMotdepasseUtilisateur'),
+                //'utilisateur_pass_modules_externes' => ,
+                //'utilisateur_uid_connexion_cookie' => ,
+                //'utilisateur_token_mfa' => ,
+                //'utilisateur_token_mfa_datetime_generation' => ,
+                'utilisateur_tel1' => $this->request->getPost('txtNum1Utilisateur'),
+                'utilisateur_tel2' => $this->request->getPost('txtNum2Utilisateur'),
+                'utilisateur_date_derniere_activite' => $date_derniere_activite,
+                'utilisateur_statut_blocage' => '0',
+                'utilisateur_niveau_acces' => '2',
             );
             $model->save($data);
 
