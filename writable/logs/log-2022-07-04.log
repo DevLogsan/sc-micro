@@ -1,0 +1,231 @@
+CRITICAL - 2022-07-04 09:17:41 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:17:56 --> Call to undefined function App\Controllers\DateTime()
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:19:53 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:20:44 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:21:07 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:22:23 --> Class "App\Controllers\DateInterval" not found
+in APPPATH\Controllers\Utilisateurs.php on line 119.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:32:39 --> Class "App\Controllers\DateTime" not found
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:34:55 --> Call to a member function add() on string
+in APPPATH\Controllers\Utilisateurs.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:35:02 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 126.
+ 1 APPPATH\Controllers\Utilisateurs.php(126): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 126)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:42:32 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:52:27 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:53:52 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:54:14 --> Undefined variable $dobStr
+in APPPATH\Controllers\Utilisateurs.php on line 116.
+ 1 APPPATH\Controllers\Utilisateurs.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dobStr', 'APPPATH\\Controllers\\Utilisateurs.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 09:57:19 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(129): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:02:43 --> Call to undefined function App\Controllers\now()
+in APPPATH\Controllers\Utilisateurs.php on line 117.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:02:57 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:03:16 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:03:34 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:08:00 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:08:26 --> rtrim(): Argument #1 ($string) must be of type string, array given
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 SYSTEMPATH\Email\Email.php(632): rtrim([...])
+ 2 APPPATH\Controllers\Utilisateurs.php(125): CodeIgniter\Email\Email->setMessage([...])
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:08:42 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:09:14 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:09:34 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:09:42 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:09:50 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 114.
+ 1 APPPATH\Controllers\Utilisateurs.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:10:01 --> Call to a member function add() on string
+in APPPATH\Controllers\Utilisateurs.php on line 118.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:12:43 --> Call to a member function add() on string
+in APPPATH\Controllers\Utilisateurs.php on line 119.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:15:09 --> Array to string conversion
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Email\\Email.php', 632)
+ 2 SYSTEMPATH\Email\Email.php(632): str_replace('', 'ROOTPATH\\public', [...])
+ 3 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:15:32 --> syntax error, unexpected token "[", expecting "("
+in APPPATH\Controllers\Utilisateurs.php on line 115.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('Utilisateurs/se_connecter')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('Utilisateurs/se_connecter')
+ 3 SYSTEMPATH\CodeIgniter.php(771): CodeIgniter\Router\Router->handle('Utilisateurs/se_connecter')
+ 4 SYSTEMPATH\CodeIgniter.php(415): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:15:41 --> Array to string conversion
+in SYSTEMPATH\Email\Email.php on line 632.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Email\\Email.php', 632)
+ 2 SYSTEMPATH\Email\Email.php(632): str_replace('', 'ROOTPATH\\public', [...])
+ 3 APPPATH\Controllers\Utilisateurs.php(127): CodeIgniter\Email\Email->setMessage([...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:16:28 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 129.
+ 1 APPPATH\Controllers\Utilisateurs.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:19:49 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 129.
+ 1 APPPATH\Controllers\Utilisateurs.php(129): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 129)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->se_connecter()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-04 10:20:17 --> Array to string conversion
+in APPPATH\Controllers\Utilisateurs.php on line 22.
+ 1 APPPATH\Controllers\Utilisateurs.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Utilisateurs.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->ajouter_un_utilisateur()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

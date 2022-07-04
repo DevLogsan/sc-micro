@@ -2,6 +2,7 @@
 
 namespace App\Controllers; //Namespace pour utiliser fct contrôleur
 use CodeIgniter\Controller;
+use CodeIgniter\I18n\Time;
 use App\Models\UtilisateursModel; //Namespace pour utiliser fct Modèle (new UtilisateursModel)
 use App\Models\AgencesModel;
 helper(['url', 'assets', 'form']); //pour utiliser le helper dans tout le controller
@@ -56,13 +57,11 @@ class Utilisateurs extends BaseController
         }
         else
         {
-            $temps_valide = 15;
+            // GENERATION MDP
+            $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur');
+            $hash = password_hash($MotDePasse);
 
-            $time = new DateTime('2011-11-17 05:05');
-            $time->add(new DateInterval('PT' . $temps_valide . 'M'));
-
-            $stamp = $time->format('Y-m-d H:i:s');
-
+            // DERNIERE ACTIVITE
             $date_derniere_activite = date('Y-m-d H:i:s');
 
             $data = array( // données à insérer
@@ -70,11 +69,11 @@ class Utilisateurs extends BaseController
                 'utilisateur_login' => $this->request->getPost('txtLoginUtilisateur'),
                 'utilisateur_pseudo' => $this->request->getPost('txtPseudoUtilisateur'),
                 'utilisateur_email' => $this->request->getPost('txtEmailUtilisateur'),
-                //'utilisateur_pass_hash' => $this->request->getPost('txtMotdepasseUtilisateur'),
+                'utilisateur_pass_hash' => $hash,
                 //'utilisateur_pass_modules_externes' => ,
                 //'utilisateur_uid_connexion_cookie' => ,
-                //'utilisateur_token_mfa' => ,
-                //'utilisateur_token_mfa_datetime_generation' => ,
+                'utilisateur_token_mfa' => $token,
+                'utilisateur_token_mfa_datetime_generation' => $heure,
                 'utilisateur_tel1' => $this->request->getPost('txtNum1Utilisateur'),
                 'utilisateur_tel2' => $this->request->getPost('txtNum2Utilisateur'),
                 'utilisateur_date_derniere_activite' => $date_derniere_activite,
@@ -107,5 +106,33 @@ class Utilisateurs extends BaseController
         }
         echo view('templates/header');
         echo view('utilisateurs/details-utilisateur', $data);
+    }
+
+    public function se_connecter()
+    {
+        // GENERATION TOKEN
+        $token = rand (100000, 999999);
+
+        // TOKEN MFA VALIDATION
+        $date = new Time('now', 'Europe/Paris');
+        $date = $date->addMinutes(15);
+
+        // envoie 
+        $email = \Config\Services::email();
+
+        $email->setFrom('technique.tpnas@gmail.com', 'SC Micro');
+        $email->setTo('loganlegallou22@gmail.com');
+
+        $email->setSubject('Code de validation');
+        $email->setMessage('Votre code de validation est : '. $token);
+
+        if ($email->send()) {
+            echo $token;
+            echo $date;
+        }
+        else
+        {
+            echo 'fail';
+        }
     }
 }
