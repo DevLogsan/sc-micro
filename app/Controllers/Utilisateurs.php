@@ -80,9 +80,9 @@ class Utilisateurs extends BaseController
                 'utilisateur_statut_blocage' => '0',
                 'utilisateur_niveau_acces' => '2',
             );
-            $model->save($data);
+            $modelUtilisateurs->save($data);
 
-            return redirect()->to('Agences/ajouter_une_agence')->with('status', "L'agence a bien été ajoutée");; // redirection si l'insertion a fonctionné
+            return redirect()->to('Utilisateurs/ajouter_un_utilisateur')->with('status', "L'utilisateur a bien été ajouté");; // redirection si l'insertion a fonctionné
         }
     }
 

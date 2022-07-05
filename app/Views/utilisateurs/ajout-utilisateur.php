@@ -32,11 +32,15 @@
 
     <div class="col-md-4">
     <label for="txtAgence" class="form-label">Agence</label><span style="color:red">*</span>
-        <select class="form-select">
-            <?php foreach($lesAgences as $uneAgence): ?>
-                <option name="txtAgence" value="<?= $uneAgence['agence_id'] ?>"><?= $uneAgence['agence_nom'] ?></option>
-            <?php endforeach ?>
-        </select>
+        <?php
+        $choix = [];
+        foreach($lesAgences as $uneAgence)
+        {
+            $choix[$uneAgence['agence_id']] = $uneAgence['agence_nom'];  // on boucle tant qu'on a des agences
+        }
+
+        echo form_dropdown('txtAgence', $choix, '', class="form-drop"); //dropdown CI4
+        ?>
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
             <?= $error = $validation->getError('txtAgence'); ?>
         <?php } ?>
