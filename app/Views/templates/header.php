@@ -37,7 +37,7 @@
                                 <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/ajouter_un_utilisateur') ?>">Ajouter un utilisateur</a>
                             </li>
                             <li class="py-2 px-0 px-lg-2">
-                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/modifier_un_utilisateur') ?>">Modifier un utilisateur</a>
+                                <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/modifier_un_profil_utilisateur') ?>">Modifier un utilisateur</a>
                             </li>
                             <li class="py-2 px-0 px-lg-2">
                                 <a class="text-primary dropdown-item" href="<?php echo site_url('Utilisateurs/liste_des_utilisateurs') ?>">Liste des utilisateurs</a>

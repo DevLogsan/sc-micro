@@ -8,7 +8,6 @@ class UtilisateursModel extends Model
     protected $table = 'utilisateurs'; //définition de la table principale
     protected $primaryKey = 'utilisateur_id';
     protected $returnType = 'object';
-    protected $useTimestamps = true;
     protected $uneSoftDeletes = false;
     protected $allowedFields = [
         'agence_id',
@@ -24,7 +23,7 @@ class UtilisateursModel extends Model
         'utilisateur_tel2',
         'utilisateur_date_derniere_activite',
         'utilisateur_statut_blocage',
-        'utilisateur_niveau_acces',
+        'utilisateur_niveau_acces'
     ];
     
     public function __construct()
