@@ -39,7 +39,7 @@
             $choix[$uneAgence['agence_id']] = $uneAgence['agence_nom'];  // on boucle tant qu'on a des agences
         }
 
-        echo form_dropdown('txtAgence', $choix, '', class="form-drop"); //dropdown CI4
+        echo form_dropdown('txtAgence', $choix, '', 'class="form-select"'); //dropdown CI4
         ?>
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
             <?= $error = $validation->getError('txtAgence'); ?>

@@ -17,6 +17,10 @@ class Utilisateurs extends BaseController
 
     public function ajouter_un_utilisateur()
     {
+        $MotDePasse = 'test'; // le mot de passe est récupéré lors de la confirmation du formulaire
+        $hash = password_hash($MotDePasse, PASSWORD_DEFAULT);
+        var_dump($hash);
+
         $data['Titre'] = 'Ajouter un utilisateur';
         $data['validation'] = ['validation' => \Config\Services::validation()];
 
@@ -58,8 +62,9 @@ class Utilisateurs extends BaseController
         else
         {
             // GENERATION MDP
-            $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur');
-            $hash = password_hash($MotDePasse);
+            $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur'); // le mot de passe est récupéré lors de la confirmation du formulaire
+            $hash = password_hash($MotDePasse, PASSWORD_DEFAULT); // on le hash, un salt est généré automatiquement par la fonction password_hash
+            $rest = substr($hash, 7);
 
             // DERNIERE ACTIVITE
             $date_derniere_activite = date('Y-m-d H:i:s');
