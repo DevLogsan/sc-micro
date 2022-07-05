@@ -482,3 +482,69 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
  6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:15:36 --> Undefined variable $hash
+in APPPATH\Controllers\Utilisateurs.php on line 248.
+ 1 APPPATH\Controllers\Utilisateurs.php(248): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hash', 'APPPATH\\Controllers\\Utilisateurs.php', 248)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:31:30 --> password_verify(): Argument #2 ($hash) must be of type string, array given
+in APPPATH\Controllers\Utilisateurs.php on line 250.
+ 1 APPPATH\Controllers\Utilisateurs.php(250): password_verify('Test1234', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:49:15 --> password_verify(): Argument #2 ($hash) must be of type string, array given
+in APPPATH\Controllers\Utilisateurs.php on line 250.
+ 1 APPPATH\Controllers\Utilisateurs.php(250): password_verify('Test1234', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:49:30 --> Undefined variable $result
+in APPPATH\Models\UtilisateursModel.php on line 58.
+ 1 APPPATH\Models\UtilisateursModel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $result', 'APPPATH\\Models\\UtilisateursModel.php', 58)
+ 2 APPPATH\Controllers\Utilisateurs.php(248): App\Models\UtilisateursModel->retournerMotdepasse('4')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:49:50 --> password_verify(): Argument #2 ($hash) must be of type string, array given
+in APPPATH\Controllers\Utilisateurs.php on line 250.
+ 1 APPPATH\Controllers\Utilisateurs.php(250): password_verify('Test1234', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:50:56 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:55:39 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:56:04 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 10:56:11 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 248.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-05 11:02:14 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 249.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('4')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

@@ -244,8 +244,11 @@ class Utilisateurs extends BaseController
             }
         }
         else
-        {    
-            if (password_verify($this->request->getPost('txtMotdepasseUtilisateur'), $hash)) { // si le mot de passe actuel est le même que celui hashé
+        {
+            $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur');
+            $MDPhash = $this->$modelUtilisateurs->retournerMotdepasse($UtilisateurID);
+
+            if (password_verify($MotDePasse, $hash['utilisateur_pass_hash'])) { // si le mot de passe actuel est le même que celui hashé
                 if ($this->request->getPost('txtNouveauMotdepasseUtilisateur') == $this->request->getPost('txtNouveauMotdepasseConfirmationUtilisateur')) { // on regarde désormais si le nouveau mot de passe à bien été renseigné
                     echo 'sa marche';
                 }
