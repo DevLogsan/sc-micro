@@ -198,8 +198,66 @@ class Utilisateurs extends BaseController
                 'agence_etat' => $retourne,
             );
             
-            $model->update($AgenceID, $data);
-            return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'agence réussite"); // redirection si l'insertion a fonctionné
+            $modelUtilisateurs->update($UtilisateurID, $data);
+            return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'utilisateur réussi"); // redirection si l'insertion a fonctionné
+        }
+    }
+
+    public function modifier_mot_de_passe($UtilisateurID = NULL)
+    {
+        $data['Titre'] = 'Modifier le mot de passe'; // titre
+        $data['validation'] = ['validation' => \Config\Services::validation()];
+
+        echo view('templates/header');
+
+        $input = $this->validate = ([ //les champs obligatoires
+            'txtMotdepasseUtilisateur' => 'required',
+            'txtNouveauMotdepasseUtilisateur' => 'required',
+            'txtNouveauMotdepasseConfirmationUtilisateur' => 'required',
+            ]);
+
+        $messages = [ //message à renvoyer en cas de non-respect des règles de validation
+            'txtMotdepasseUtilisateur' => [
+                'required' => "Veuillez renseigner le mot de passze actuel",
+            ],
+                'txtNouveauMotdepasseUtilisateur' => [
+            'required' => "Veuillez renseigner le nouveau mot de passe",
+            ],
+                'txtNouveauMotdepasseConfirmationUtilisateur' => [
+            'required' => "Veuillez renseigner à nouveau le mot de passe",
+            ],
+        ];
+
+        $modelUtilisateurs = new UtilisateursModel();
+        $data['unUtilisateur'] = $modelUtilisateurs->retournerParametreUtilisateur($UtilisateurID); // on retourne l'utilisateur
+
+        if (!$this->validate($input, $messages)) // formulaire non validé, on renvoie le formulaire
+        {
+            if ($UtilisateurID === null) // pas d'utilisateur choisi, on retourne à la liste des utilisateurs
+            {
+                return redirect()->to('Utilisateurs/modifier_un_profil_utilisateur');
+            }
+            else
+            {
+                if($_POST) $data['Titre'] = "Modifier le mot de passe | Erreur";
+                echo view('utilisateurs/modifier-mot-de-passe', $data);
+            }
+        }
+        else
+        {    
+            if (password_verify($this->request->getPost('txtMotdepasseUtilisateur'), $hash)) { // si le mot de passe actuel est le même que celui hashé
+                if ($this->request->getPost('txtNouveauMotdepasseUtilisateur') == $this->request->getPost('txtNouveauMotdepasseConfirmationUtilisateur')) { // on regarde désormais si le nouveau mot de passe à bien été renseigné
+                    echo 'sa marche';
+                }
+                else
+                {
+                    echo 'pas le meme mdp';
+                }
+            }
+            else
+            {
+                echo 'Le mot de passe est invalide';
+            }
         }
     }
 
