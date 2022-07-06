@@ -46,7 +46,7 @@ $infos ='<div style="background-color: #043e6b;" class="btn btn-primary"> Modifi
         <?php } ?>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label for="txtEmailUtilisateur" class="form-label">E-Mail</label><span style="color:red">*</span>
         <div class="input-group has-validation">
             <span class="input-group-text">@</span>
@@ -57,7 +57,7 @@ $infos ='<div style="background-color: #043e6b;" class="btn btn-primary"> Modifi
         <?php } ?>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label for="txtNum1Utilisateur" class="form-label">Numéro de téléphone 1</label>
     <input type="text" class="form-control" name="txtNum1Utilisateur" value="<?php echo $value->utilisateur_tel1 ?>">
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
@@ -65,11 +65,19 @@ $infos ='<div style="background-color: #043e6b;" class="btn btn-primary"> Modifi
         <?php } ?>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
         <label for="txtNum2Utilisateur" class="form-label">Numéro de téléphone 2</label>
     <input type="text" class="form-control" name="txtNum2Utilisateur" value="<?php echo $value->utilisateur_tel2 ?>">
         <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
             <?= $error = $validation->getError('txtNum2Utilisateur'); ?>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <label for="txtModuleExterneUtilisateur" class="form-label">Mot de passe pour module externe</label>
+    <input type="text" class="form-control" name="txtModuleExterneUtilisateur" value="<?php echo $value->utilisateur_pass_modules_externes ?>">
+        <?php if ($Titre == 'Ajouter un utilisateur | Erreur') {?>
+            <?= $error = $validation->getError('txtModuleExterneUtilisateur'); ?>
         <?php } ?>
     </div>
 

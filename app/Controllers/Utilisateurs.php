@@ -71,17 +71,13 @@ class Utilisateurs extends BaseController
             // DERNIERE ACTIVITE
             $date_derniere_activite = new Time('now', 'Europe/Paris');
 
-            // TEST
-            $test = 'test';
-
+            // INSERTION
             $data = [
                 'agence_id' => $this->request->getPost('txtAgence'),
                 'utilisateur_login' => $this->request->getPost('txtLoginUtilisateur'),
                 'utilisateur_pseudo' => $this->request->getPost('txtPseudoUtilisateur'),
                 'utilisateur_email' => $this->request->getPost('txtEmailUtilisateur'),
                 'utilisateur_pass_hash' => $hash,
-                'utilisateur_pass_modules_externes' => $test,
-                'utilisateur_uid_connexion_cookie' => $test,
                 'utilisateur_token_mfa' => $token,
                 'utilisateur_token_mfa_datetime_generation' => $date,
                 'utilisateur_tel1' => $this->request->getPost('txtNum1Utilisateur'),
@@ -198,6 +194,7 @@ class Utilisateurs extends BaseController
                 'utilisateur_email' => $this->request->getPost('txtEmailUtilisateur'),
                 'utilisateur_tel1' => $this->request->getPost('txtNum1Utilisateur'),
                 'utilisateur_tel2' => $this->request->getPost('txtNum2Utilisateur'),
+                'utilisateur_pass_modules_externes' => $this->request->getPost('txtModuleExterneUtilisateur'),
                 'utilisateur_statut_blocage' => $retourne_statut,
                 'utilisateur_niveau_acces' => $retourne_acces
             );
