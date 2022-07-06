@@ -51,7 +51,7 @@ class UtilisateursModel extends Model
     public function retournerMotdepasse($UtilisateurID)
     {
         $builder = $this->db->table('utilisateurs');
-        $builder->select('utilisateur_pass_hash');
+        $builder->select('utilisateur_pass_hash, utilisateur_login');
         $builder->where('utilisateur_id', $UtilisateurID);
         $query = $builder->get();
         if (count($query->getResultArray()) == 1) {

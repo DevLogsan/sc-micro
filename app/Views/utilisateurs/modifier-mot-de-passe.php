@@ -5,17 +5,6 @@ $infos ='<div style="background-color: #043e6b;" class="btn btn-primary"> Voir p
         </svg></div>';
 ?>
 <p class="fs-4"><?php echo $Titre ?></p>
-<?php
-    if (session()->getFlashdata('status')) // si l'insertion a bien fonctionné, on affiche un message
-    {
-        ?>
-            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-                <strong>Information : </strong> <?= session()->getFlashdata('status') ?>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
-            </div>
-        <?php
-    }
-?>
 <?php foreach($unUtilisateur as $uneInformation => $value): // le foreach permet d'afficher les données ?>
 <hr class="mx-auto mx-lg-0 my-5">
 <?php $validation = \Config\Services::validation(); ?>

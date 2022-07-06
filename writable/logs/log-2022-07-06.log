@@ -1,0 +1,52 @@
+CRITICAL - 2022-07-06 02:13:43 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 249.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 02:15:28 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 250.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 02:15:34 --> Object of class App\Models\UtilisateursModel could not be converted to string
+in APPPATH\Controllers\Utilisateurs.php on line 249.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 02:17:45 --> Non-static method App\Models\UtilisateursModel::retournerMotdepasse() cannot be called statically
+in APPPATH\Controllers\Utilisateurs.php on line 249.
+ 1 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('1')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 02:18:58 --> Undefined variable $hash
+in APPPATH\Controllers\Utilisateurs.php on line 251.
+ 1 APPPATH\Controllers\Utilisateurs.php(251): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hash', 'APPPATH\\Controllers\\Utilisateurs.php', 251)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('1')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 02:30:43 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in C:\xampp\htdocs\sc-micro\app\Controllers\Utilisateurs.php on line 258
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 32.
+ 1 APPPATH\Controllers\Utilisateurs.php(258): CodeIgniter\HTTP\RedirectResponse->to('Agences/modifier_mot_de_passe', 'refresh:3')
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('5')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 03:12:49 --> Undefined array key "utilisateur_login"
+in APPPATH\Controllers\Utilisateurs.php on line 271.
+ 1 APPPATH\Controllers\Utilisateurs.php(271): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utilisateur_login"', 'APPPATH\\Controllers\\Utilisateurs.php', 271)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-07-06 03:14:12 --> Undefined array key "utilisateur_login"
+in APPPATH\Controllers\Utilisateurs.php on line 270.
+ 1 APPPATH\Controllers\Utilisateurs.php(270): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "utilisateur_login"', 'APPPATH\\Controllers\\Utilisateurs.php', 270)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Utilisateurs->modifier_mot_de_passe('6')
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilisateurs))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

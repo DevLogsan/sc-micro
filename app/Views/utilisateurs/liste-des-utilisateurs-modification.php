@@ -7,10 +7,21 @@ $infos2 ='<div class="btn btn-danger"> Supprimer <svg xmlns="http://www.w3.org/2
     <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
 </svg></div>';
 ?>
-<p class="fs-4">Liste des agences</p>
+<?php
+    if (session()->getFlashdata('status')) // si l'insertion a bien fonctionné, on affiche un message
+    {
+        ?>
+            <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+                <strong>Information : </strong> <?= session()->getFlashdata('status') ?>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Fermer'></button>
+            </div>
+        <?php
+    }
+?>
+<p class="fs-4"><?php echo $Titre ?></p>
 <hr class="mx-auto mx-lg-0 my-5">
 <table class="table table-active table-striped text-center align-middle">
-    <thead class="">
+    <thead>
         <tr>
             <th scope="col">#</th>
             <th scope="col">Pseudo</th>

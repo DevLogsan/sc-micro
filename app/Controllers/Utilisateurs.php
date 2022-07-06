@@ -60,7 +60,7 @@ class Utilisateurs extends BaseController
             // GENERATION MDP
             $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur'); // le mot de passe est récupéré lors de la confirmation du formulaire
             $hash = password_hash($MotDePasse, PASSWORD_DEFAULT); // on le hash, un salt est généré automatiquement par la fonction password_hash
-            // $rest = substr($hash, 7); retourne le segment de $hash défini par 7
+            // A voir plutard : $rest = substr($hash, 7); retourne le segment de $hash défini par 7
 
             // GENERATION TOKEN
             $token = rand (100000, 999999); // le token doit être != de null, donc on en met un aléatoire
@@ -131,7 +131,6 @@ class Utilisateurs extends BaseController
             'txtPseudoUtilisateur' => 'required',
             'txtAgence' => 'required',
             'txtEmailUtilisateur' => 'required|valid_email',
-            'txtMotdepasseUtilisateur' => 'required', // la 2eme adresse n'est pas obligatoire
             ]);
 
         $messages = [ //message à renvoyer en cas de non-respect des règles de validation
@@ -146,9 +145,6 @@ class Utilisateurs extends BaseController
             ],
             'txtEmailUtilisateur' => [
                 'required' => "Veuillez renseigner une adresse mail valide",
-            ],
-            'txtMotdepasseUtilisateur' => [
-                'required' => "Veuillez renseigner le mot de passe",
             ],
         ];
 
@@ -174,32 +170,40 @@ class Utilisateurs extends BaseController
         }
         else // le formulaire est correct
         {
-            $etat = $this->request->getPost('txtActiviteAgence'); // le checkbox est un bool
+            $statut = $this->request->getPost('txtUtilisateurStatutBlocage'); // le checkbox est un bool
+            $acces = $this->request->getPost('txtUtilisateurNiveauAcces');
 
-            if ($etat === null) { // si la case est décoché, cela retourne null
-                $retourne = 0; // on retourne 0 si c'est le cas
+            // BOOL STATUT BLOCAGE
+            if ($statut === null) { // si la case est décoché, cela retourne null
+                $retourne_statut = 0; // on retourne 0 si c'est le cas
             }
             else
             {
-                $retourne = 1; // sinon on retourne 1
+                $retourne_statut = 1; // sinon on retourne 1
+            }
+
+            // BOOL NIVEAU ACCES
+            if ($acces === null) { // si la case est décoché, cela retourne null
+                $retourne_acces = 2; // on retourne 2 si c'est le cas
+            }
+            else
+            {
+                $retourne_acces = 1; // sinon on retourne 1
             }
     
             $data = array( // données à mettre à jour
-                'agence_nom' => $this->request->getPost('txtNomAgence'),
-                'agence_nom_normalise' => $this->request->getPost('txtNomAgenceNorm'),
-                'agence_sigle' => $this->request->getPost('txtSigleAgence'),
-                'agence_tel' => $this->request->getPost('txtNumAgence'),
-                'agence_email' => $this->request->getPost('txtEmailAgence'),
-                'agence_adresse1' => $this->request->getPost('txtAdresse1Agence'),
-                'agence_adresse2' => $this->request->getPost('txtAdresse2Agence'),
-                'agence_code_postal' => $this->request->getPost('txtCPAgence'),
-                'agence_ville' => $this->request->getPost('txtVilleAgence'),
-                'agence_horaires' => $this->request->getPost('txtHoraireAgence'),
-                'agence_etat' => $retourne,
+                'agence_id' => $this->request->getPost('txtAgence'),
+                'utilisateur_login' => $this->request->getPost('txtLoginUtilisateur'),
+                'utilisateur_pseudo' => $this->request->getPost('txtPseudoUtilisateur'),
+                'utilisateur_email' => $this->request->getPost('txtEmailUtilisateur'),
+                'utilisateur_tel1' => $this->request->getPost('txtNum1Utilisateur'),
+                'utilisateur_tel2' => $this->request->getPost('txtNum2Utilisateur'),
+                'utilisateur_statut_blocage' => $retourne_statut,
+                'utilisateur_niveau_acces' => $retourne_acces
             );
             
             $modelUtilisateurs->update($UtilisateurID, $data);
-            return redirect()->to('Agences/modifier_une_agence')->with('status', "Modification de l'utilisateur réussi"); // redirection si l'insertion a fonctionné
+            return redirect()->to('Utilisateurs/modifier_un_profil_utilisateur')->with('status', "Modification de l'utilisateur réussi"); // redirection si l'insertion a fonctionné
         }
     }
 
@@ -218,7 +222,7 @@ class Utilisateurs extends BaseController
 
         $messages = [ //message à renvoyer en cas de non-respect des règles de validation
             'txtMotdepasseUtilisateur' => [
-                'required' => "Veuillez renseigner le mot de passze actuel",
+                'required' => "Veuillez renseigner le mot de passe actuel",
             ],
                 'txtNouveauMotdepasseUtilisateur' => [
             'required' => "Veuillez renseigner le nouveau mot de passe",
@@ -246,20 +250,33 @@ class Utilisateurs extends BaseController
         else
         {
             $MotDePasse = $this->request->getPost('txtMotdepasseUtilisateur');
-            $MDPhash = $this->$modelUtilisateurs->retournerMotdepasse($UtilisateurID);
+            $Utilisateur = $modelUtilisateurs->retournerMotdepasse($UtilisateurID);
 
-            if (password_verify($MotDePasse, $hash['utilisateur_pass_hash'])) { // si le mot de passe actuel est le même que celui hashé
-                if ($this->request->getPost('txtNouveauMotdepasseUtilisateur') == $this->request->getPost('txtNouveauMotdepasseConfirmationUtilisateur')) { // on regarde désormais si le nouveau mot de passe à bien été renseigné
-                    echo 'sa marche';
+            if (password_verify($MotDePasse, $Utilisateur['utilisateur_pass_hash'])) { // si le mot de passe actuel est le même que celui hashé
+                if ($this->request->getPost('txtNouveauMotdepasseUtilisateur') == $this->request->getPost('txtNouveauMotdepasseConfirmationUtilisateur')) { // on regarde désormais si le nouveau mot de passe à bien été renseigné  
+                    
+                    // GENERATION MDP
+                    $MotDePasse = $this->request->getPost('txtNouveauMotdepasseUtilisateur'); // le mot de passe est récupéré lors de la confirmation du formulaire
+                    $hash = password_hash($MotDePasse, PASSWORD_DEFAULT); // on le hash, un salt est généré automatiquement par la fonction password_hash
+                    
+                    $data = [
+                        'utilisateur_pass_hash' => $hash,
+                    ];
+
+                    $modelUtilisateurs->update($UtilisateurID, $data); // on met à jour dans la base de donnée
+
+                    return redirect()->to('Utilisateurs/modifier_un_profil_utilisateur')->with('status', "Mot de passe modifié");
                 }
-                else
+                else // si le mot de passe de confirmation ne correspond pas au nouveau mot de passe
                 {
-                    echo 'pas le meme mdp';
+                    if($_POST) $data['Titre'] = "Modifier le mot de passe | Erreur lors de la saisie du nouveau mot de passe";
+                    echo view('utilisateurs/modifier-mot-de-passe', $data);
                 }
             }
             else
             {
-                echo 'Le mot de passe est invalide';
+                if($_POST) $data['Titre'] = "Modifier le mot de passe | Erreur lors de la saisie du mot de passe actuel";
+                echo view('utilisateurs/modifier-mot-de-passe', $data);
             }
         }
     }
