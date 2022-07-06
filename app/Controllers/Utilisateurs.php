@@ -278,6 +278,13 @@ class Utilisateurs extends BaseController
         }
     }
 
+    public function supprimer_un_utilisateur($UtilisateurID = NULL)
+    {
+        $modelUtilisateurs = new UtilisateursModel();
+        $modelUtilisateurs->delete(['utilisateur_id' => $UtilisateurID]); // on supprime la ligne dont l'id est égal à celui sélectionné dans la vue
+        return redirect()->to('Utilisateurs/modifier_un_profil_utilisateur')->with('status', "L'utilisateur a bien été supprimé"); // redirection + affichage d'un message de confirmation
+    }
+
     // AUTRES
 
     public function se_connecter()
