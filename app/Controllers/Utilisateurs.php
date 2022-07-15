@@ -105,9 +105,9 @@ class Utilisateurs extends BaseController
     public function details_utilisateur($UtilisateurID = NULL)
     {
         $modelUtilisateurs = new UtilisateursModel();
-        $data['unUtilisateur'] = $modelUtilisateurs->retournerParametreUtilisateur($UtilisateurID); // récup une agence depuis le modèle
+        $data['unUtilisateur'] = $modelUtilisateurs->retournerParametreUtilisateur($UtilisateurID); // récup une utilisateur depuis le modèle
 
-        if(empty($data['unUtilisateur'])) // si pas d'agence
+        if(empty($data['unUtilisateur'])) // si pas d'utilisateur
         {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
